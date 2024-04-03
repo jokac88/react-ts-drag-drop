@@ -1,0 +1,62 @@
+// Define breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra-large: 1200px;
+
+.drag {
+  &-area {
+    display: grid;
+    //grid-template-columns: repeat(auto-fill, minmax(calc(400px - 1rem), 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $breakpoint-extra-large) {
+      grid-template-columns: repeat(auto-fill, minmax(calc(400px - 1rem), 1fr));
+    }
+  }
+
+  &-item {
+    display: flex;
+    border-radius: 10px;
+    padding: 15px;
+    border: 2px solid #ffffff;
+    background-color: #404040;
+
+    @media (min-width: $breakpoint-extra-large) {
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+      cursor: move;
+      transition: all .3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 4px 8px rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+.user-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1rem;
+
+  &__text {
+    margin: 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
