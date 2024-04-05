@@ -4,10 +4,15 @@ $breakpoint-medium: 768px;
 $breakpoint-large: 992px;
 $breakpoint-extra-large: 1200px;
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .drag {
   &-area {
     display: grid;
-    //grid-template-columns: repeat(auto-fill, minmax(calc(400px - 1rem), 1fr));
     gap: 1rem;
     padding: 1rem;
     max-width: 1200px;
@@ -28,9 +33,9 @@ $breakpoint-extra-large: 1200px;
 
   &-item {
     display: flex;
-    border-radius: 10px;
     padding: 15px;
     border: 2px solid #ffffff;
+    border-radius: 10px;
     background-color: #404040;
 
     @media (min-width: $breakpoint-extra-large) {
