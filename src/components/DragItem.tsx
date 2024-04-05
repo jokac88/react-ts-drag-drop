@@ -1,6 +1,6 @@
 import {ReactNode, useContext, DragEvent} from "react";
 import {DragContext} from "./DragContext.tsx";
-import '../style.scss';
+import "../style.scss";
 
 type DragItemProps = {
   id: number;
