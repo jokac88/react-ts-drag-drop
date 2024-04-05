@@ -14,9 +14,9 @@ $breakpoint-extra-large: 1200px;
   &-area {
     display: grid;
     gap: 1rem;
-    padding: 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    padding: 0 1rem;
+    margin: 1rem auto;
 
     @media (min-width: $breakpoint-small) {
       grid-template-columns: repeat(2, 1fr);
@@ -27,6 +27,7 @@ $breakpoint-extra-large: 1200px;
     }
 
     @media (min-width: $breakpoint-extra-large) {
+      padding: 0;
       grid-template-columns: repeat(auto-fill, minmax(calc(400px - 1rem), 1fr));
     }
   }
