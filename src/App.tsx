@@ -21,7 +21,7 @@ const UserItem = ({index, fullName, email}: UserProps) => {
   );
 };
 
-function App() {
+export const DraggableUserList = () => {
   const [userList, setUserList] = useState(users);
 
   return (
@@ -35,6 +35,4 @@ function App() {
       </DragArea>
     </DragContextProvider>
   );
-}
-
-export default App;
+};
